@@ -119,6 +119,143 @@ task = greet + name
 
 
 
+// Loop to iterate even numbers from 0 to 12
+let number = 0;
+while (number <= 12) {
+    //console.log(number);
+    number += 2;
+}
+
+
+
+// Compute 2 to the power of 10 using a while loop
+let result = 1, counter = 0;
+while (counter < 10) {
+    result *= 2;
+    counter += 1;
+}
+task = result;
+
+
+// Compute 2 raised to the 6th power using exponentiation operator
+task = 2 ** 6;
+
+
+// Prompt user for their name (example uses prompt-sync, currently commented out)
+let your_name;
+const prompt = require('prompt-sync')();
+// do {
+//     your_name = prompt("Who are you:");
+// } while (!your_name);
+task = "Hello " + your_name;
+
+
+
+
+// Loop to iterate even numbers from 0 to 12 using a for loop
+for (let num = 0; num <= 12; num += 2){
+    //console.log(num)
+}
+
+
+
+// Compute 2 to the power of 10 using a for loop
+let res = 1;
+for (let conc = 0; conc < 10; conc += 1){
+    res *= 2;
+}
+task = res;
+
+
+
+// Find the first number >=20 that is divisible by 8 using an infinite loop with break
+for (let num = 20; ; num += 1){
+    if (num % 8==0) {
+        task = num;
+        break;
+    }
+}
+
+
+
+
+// EX 1.
+let output = "";
+for (let num = 0; num < 7; num += 1){
+    output += '#';
+    //console.log(output);
+}
+
+
+
+// EX 2.
+let num = 1;
+while (num <= 20) {
+    if (num % 15 === 0) {
+        //console.log('FizzBuzz')
+    }
+    else if (num % 5 === 0) {
+        //console.log('Buzz')
+    }
+    else if (num % 3 === 0) {
+        //console.log('Fizz')
+    }
+    else {
+        //console.log(num)
+    }
+
+    num += 1;
+}
+
+
+
+// EX 3.
+let chess = '', coun = 1, turn = false;
+while (coun <= 64) {
+    if (coun % 2 === 0 && !turn) {
+        chess += '#';
+    }
+    else if(coun % 2 === 0 && turn) {
+        chess += " ";
+    }
+    else if(coun % 2 !== 0 && !turn) {
+        chess += " ";
+    }
+    else if(coun % 2 !== 0 && turn) {
+        chess += "#";
+    }
+
+    if (coun % 8 === 0 && coun<64) {
+        turn = !turn;
+        chess+='\n'
+    }
+
+    coun++;
+}
+// console.log(chess);
+
+
+
+
+// ###############
+// Chapter - 3
+// ###############
+
+
+
+// Recursive function to compute exponentiation (base^exponent)
+function recu(base, exponent) {
+    if (exponent === 0){
+        return 1;
+    }
+    else {
+        return base * recu(base, exponent - 1);
+    }
+}
+
+task = recu(2,10)
+
+
 console.log(task)
 
 
