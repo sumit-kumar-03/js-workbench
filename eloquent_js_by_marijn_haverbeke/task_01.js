@@ -253,9 +253,65 @@ function recu(base, exponent) {
     }
 }
 
-task = recu(2,10)
+task = recu(2, 10)
 
 
+
+// Function to format farm inventory with zero‑padded counts
+function printFarmInventory(cows, chickens) {
+    let cowString = String(cows), chickenString = String(chickens);
+    while (cowString.length < 3) {
+        cowString = '0' + cowString;
+    }
+    while (chickenString.length < 3) {
+        chickenString = '0' + chickenString;
+    }
+    // Create formatted string with newline separating cows and chickens
+resp = `${cowString} Cows \n${chickenString} Chickens`;
+    return resp
+}
+task = printFarmInventory(12, 9)
+
+
+
+
+// Determine if a non‑negative integer is even
+function isEven(n) {
+    if (n >= 0) {
+        if (n % 2 === 0) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    else {
+        // Return undefined for negative inputs
+return undefined;
+    }
+}
+task = isEven(0)
+
+
+
+// Count occurrences of a character in a string
+function countS(string, char) {
+    let count = 0;
+    if (string.length > 0) {
+        for (let pos = 0; pos < string.length; pos++){
+            if (string[pos] === char) {
+                count++
+            }
+        }
+    }
+    return count;
+}
+task = countS('qwertyhnbvcdxswasxdfrdcvbhy', 'q')
+
+
+
+
+// Output the final result
 console.log(task)
 
 
