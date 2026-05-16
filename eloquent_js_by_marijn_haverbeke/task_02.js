@@ -253,6 +253,6 @@ function reverseArray(list) {
 // Example usage
 task = reverseArray([1, 2, 3, 4, 5]);
 
-// Output the final result
+
 // Output the final computed value to the console
 console.log(task);
